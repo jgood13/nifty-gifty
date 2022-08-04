@@ -22,7 +22,7 @@ const giftOccasion = [
     giftee_id: 4,
   },
   {
-    occasion: "Christmas",
+    occasion: "Baby Shower",
     occasionDate: 2022 - 12 - 25,
     giftee_id: 5,
   },
