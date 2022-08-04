@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
       ],
     });
 
-    const gifts = giftData.map((project) => project.get({ plain: true }));
+    const gifts = giftData.map((gift) => gift.get({ plain: true }));
 
     res.render("homepage", {
       gifts,
