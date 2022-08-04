@@ -1,7 +1,7 @@
 const { Model, Datatypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Registry extends Model {}
+class RegistryGift extends Model {}
 
 Registry.init(
   {
@@ -11,14 +11,14 @@ Registry.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    gift: {
       type: Datatypes.STRING,
       allowNull: false,
     },
-    user_id: {
+    registry_id: {
       type: Datatypes.INTEGER,
       references: {
-        model: "user",
+        model: "registry",
         key: "id",
       },
     },
@@ -28,8 +28,8 @@ Registry.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "resistry",
+    modelName: "resistryGift",
   }
 );
 
-module.exports = Registry;
+module.exports = RegistryGift;
