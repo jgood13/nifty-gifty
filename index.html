@@ -1,5 +1,4 @@
 <html lang="en">
-
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,21 +17,19 @@
     <nav>
       <a href="/">Home</a>
       {{#if loggedIn}}
-        <button id="logout" class="btn-no-style">Logout</button>
+      <button id="logout" class="btn-no-style">Logout</button>
       {{else}}
-        <a href="/login">Login</a>
+      <a href="/login">Login</a>
       {{/if}}
     </nav>
     <main>
       <aside>
         <h2>A place to remember your gifts!</h2>
       </aside>
-      <div class="gifts">
-        {{{body}}}
-      </div>
+      <div class="gifts">{{{body}}}</div>
     </main>
     {{#if loggedIn}}
-      <script src="/js/logout.js"></script>
+    <script src="/js/logout.js"></script>
     {{/if}}
 
     <script
@@ -44,5 +41,4 @@
       crossorigin="anonymous"
     ></script>
   </body>
-
 </html>
