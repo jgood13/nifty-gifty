@@ -2,6 +2,8 @@ const User = require("./user");
 const Giftee = require("./giftee");
 const GiftIdea = require("./giftIdea");
 const Registry = require("./registry");
+const RegistryGift = require("./registryGift");
+const GiftOccasion = require("./giftOccasion");
 
 User.hasMany(Giftee, {
   foreignKey: "user_id",
@@ -30,9 +32,29 @@ Registry.belongsTo(User, {
   foreignKey: "user_id",
 });
 
+Registry.hasMany(RegistryGift, {
+  foreignKey: "registry_id",
+  onDelete: "CASCADE",
+});
+
+RegistryGift.belongsTo(Registry, {
+  foreignKey: "registry_id",
+});
+
+GiftOccasion.hasMany(GiftIdea, {
+  foreignKey: "giftOccasion_id",
+  onDelete: "CASCADE",
+});
+
+GiftIdea.belongsTo(GiftOccasion, {
+  foreignKey: "giftOccasion_id",
+});
+
 module.exports = {
   User,
   Giftee,
   GiftIdea,
   Registry,
+  RegistryGift,
+  GiftOccasion,
 };

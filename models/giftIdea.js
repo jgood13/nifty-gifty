@@ -11,19 +11,14 @@ GiftIdea.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    occasion: {
-      type: Datatypes.STRING,
-    },
-    occasionDate: {
-      type: Datatypes.DATE,
-    },
     gift: {
       type: Datatypes.STRING,
+      allowNull: false,
     },
-    giftee_id: {
+    giftOccasion_id: {
       type: Datatypes.INTEGER,
       references: {
-        model: "giftee",
+        model: "giftOccasion",
         key: "id",
       },
     },
