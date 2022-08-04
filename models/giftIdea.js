@@ -30,9 +30,9 @@ GiftIdea.init(
   },
   {
     sequelize,
-    timestamps,
-    freezeTableName,
-    underscored,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
     modelName: "giftIdea",
   }
 );
