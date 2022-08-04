@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const userRoutes = require("./userRoutes");
-const projectRoutes = require("./giftRoutes");
+const giftRoutes = require("./giftRoutes");
 
 router.use("/users", userRoutes);
 router.use("/gifts", giftRoutes);
