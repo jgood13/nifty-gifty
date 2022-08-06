@@ -33,5 +33,5 @@ const giftOccasion = [
   },
 ];
 
-const seedGiftOccasion = () => GiftOccasion.bulkCreate(giftOccasionData);
-module.exports = seedGiftOccasion;
+const seedGiftOccasions = () => GiftOccasion.bulkCreate(giftOccasionData);
+module.exports = seedGiftOccasions;
