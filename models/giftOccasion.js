@@ -1,4 +1,4 @@
-const { Model, Datatypes } = require("sequelize");
+const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
 class GiftOccasion extends Model {}
@@ -6,20 +6,20 @@ class GiftOccasion extends Model {}
 GiftOccasion.init(
   {
     id: {
-      type: Datatypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
     occasion: {
-      type: Datatypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     occasionDate: {
-      type: Datatypes.DATE,
+      type: DataTypes.DATE,
     },
     giftee_id: {
-      type: Datatypes.INTEGER,
+      type: DataTypes.INTEGER,
       references: {
         model: "giftee",
         key: "id",

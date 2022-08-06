@@ -1,6 +1,6 @@
 const { GiftOccasion } = require("../models");
 
-const giftOccasion = [
+const giftOccasionData = [
   {
     occasion: "Birthday",
     occasionDate: 2022 - 11 - 18,
@@ -33,5 +33,5 @@ const giftOccasion = [
   },
 ];
 
-const seedGiftOccasion = () => GiftOccasion.bulkCreate(giftOccasionData);
-module.exports = seedGiftOccasion;
+const seedGiftOccasions = () => GiftOccasion.bulkCreate(giftOccasionData);
+module.exports = seedGiftOccasions;

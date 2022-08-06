@@ -51,6 +51,6 @@ const registryGiftData = [
   },
 ];
 
-const seedRegistryGift = () => RegistryGift.bulkCreate(registryGiftData);
+const seedRegistryGifts = () => RegistryGift.bulkCreate(registryGiftData);
 
-module.exports = seedRegistryGift;
+module.exports = seedRegistryGifts;

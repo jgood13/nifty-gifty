@@ -1,9 +1,8 @@
-
 const sequelize = require("../config/connection");
 
 const seedUsers = require("./user-seeds");
 const seedGiftees = require("./giftee-seeds");
-const seedRegistry = require("./giftee-seeds");
+const seedRegistry = require("./registry-seeds");
 const seedGiftIdeas = require("./giftIdea-seeds");
 const seedGiftOccasions = require("./giftOccasion-seeds");
 const seedRegistryGifts = require("./registryGift-seeds");
