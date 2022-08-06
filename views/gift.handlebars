@@ -1,0 +1,11 @@
+{{#if loggedIn}}
+  <section class="gift">
+    <img src="/images/{{}}" alt="{{}}" />
+    <div class="gift-details">
+      {{!-- <h3>{{ gift_name}}</h3> --}}
+      {{!-- <p> {{ gift description }}</p> --}}
+    </div>
+  </section>
+{{else}}
+  <a href="../public/js/login.js">You must login first to view this page</a>
+{{/if}}
