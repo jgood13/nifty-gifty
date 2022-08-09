@@ -1,4 +1,6 @@
-{{#if loggedIn}}
+<h1>This is a profilepage</h1>
+
+{{#if logged_in}}
   <div class="profile-card">
     <div class="profile-card-header">
       {{!-- {{user's name??}} --}}
@@ -8,5 +10,5 @@
     </div>
   </div>
 {{else}}
-  <a href="../public/js/login.js">You must login first to view this page</a>
+  <a href="./login.js">You must login first to view this page</a>
 {{/if}}

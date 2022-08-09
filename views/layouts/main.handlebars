@@ -15,6 +15,14 @@
     <div>
       <header>
         <h1>Welcome to Gifty!</h1>
+        <nav>
+          {{#if logged_in}}
+            <a href="/profile">profile</a>
+            <button>Logout</button>
+          {{else}}
+            <a href="/login">Login</a>
+          {{/if}}
+        </nav>
       </header>
       <main class="container">
         {{{body}}}

@@ -16,7 +16,7 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -38,9 +38,13 @@ User.init(
   },
   {
     hooks: {
-      beforeCreate: async (user) => {
-        user.password = await bcrypt.hash(user.password, 7);
-        return user;
+      beforeCreate: async (userData) => {
+        userData.password = await bcrypt.hash(userData.password, 7);
+        return userData;
+      },
+      beforeUpdate: async (newUserData) => {
+        newUserData.password = await bcrypt.hash(newUserData.password, 7);
+        return newUserData;
       },
     },
     sequelize,
