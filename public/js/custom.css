@@ -1,0 +1,27 @@
+* {
+  background-color: #f0f4ef;
+}
+
+h1 {
+  color: #3f7cac;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  color: #8ba2ad;
+  display: flex;
+  justify-content: center;
+}
+
+.login-card {
+  color: #f0f4ef;
+}
+
+.btn-primary {
+  color: #bdc4a7;
+}
+
+.container {
+  background-color: #d5e1a3;
+}
