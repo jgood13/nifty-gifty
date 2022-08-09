@@ -1,14 +1,35 @@
-<h1>This is a profilepage</h1>
-
 {{#if logged_in}}
-  <div class="profile-card">
-    <div class="profile-card-header">
-      {{!-- {{user's name??}} --}}
-    </div>
-    <div class="card-body">
-      {{!-- {{profile??}} --}}
+
+  <div class="jumbotron">
+    <h1 class="font-weight-bold display-4">Welcome {{username}}!</h1>
+    <hr class="my-4" />
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+
+        <h1 class="">Create a new Gift list!</h1>
+        <form>
+          <div class="form-group">
+            <label>Name of giftee:</label>
+            <input
+              type="text"
+              placeholder="Enter name of person"
+              class="form-control"
+            />
+            <button class="btn">Submit</button>
+          </div>
+        </form>
+      </div>
+      {{#if giftee.length}}
+        <div class="col-4">
+          <h2>Your Giftee's!</h2>
+          {{#each giftees as |giftee|}}
+            <div> <h4>{{giftee.name}}</h4></div>
+          {{/each}}
+        </div>
+      {{/if}}
     </div>
   </div>
-{{else}}
-  <a href="./login.js">You must login first to view this page</a>
 {{/if}}
