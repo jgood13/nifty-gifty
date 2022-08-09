@@ -1,0 +1,48 @@
+* {
+  background-color: #f0f4ef;
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+
+header {
+  display: block;
+}
+
+h1 {
+  color: #3f7cac;
+  background-color: #d5e1a3;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+h2 {
+  color: #3f7cac;
+  display: flex;
+  align-content: column;
+}
+
+.login-card {
+  background-color: #f0f4ef;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  /* justify-content: center; */
+  padding: 10px;
+  margin: 5px;
+}
+
+.form-group {
+  color: #8ba2ad;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.btn {
+  color: #3f7cac;
+  background-color: #d5e1a3;
+}
+
+.container {
+  background-color: #d5e1a3;
+}
