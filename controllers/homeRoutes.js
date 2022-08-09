@@ -1,22 +1,22 @@
 const router = require("express").Router();
-const { Gift, User } = require("../models");
+const { Giftee, User, Registry } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
-    const giftData = await Gift.findAll({
+    const gifteeData = await Giftee.findAll({
       include: [
         {
           model: User,
-          attributes: ["name"],
+          attributes: ["id"],
         },
       ],
     });
 
-    const gifts = giftData.map((gift) => gift.get({ plain: true }));
+    const giftees = gifteeData.map((giftee) => giftee.get({ plain: true }));
 
     res.render("homepage", {
-      gifts,
+      giftees,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -24,21 +24,21 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/gift/:id", async (req, res) => {
+router.get("/giftee/:id", async (req, res) => {
   try {
-    const giftData = await Gift.findByPk(req.params.id, {
+    const gifteeData = await Giftee.findByPk(req.params.id, {
       include: [
         {
           model: User,
-          attributes: ["name"],
+          attributes: ["id"],
         },
       ],
     });
 
-    const gift = giftData.get({ plain: true });
+    const giftee = gifteeData.get({ plain: true });
 
     res.render("gift", {
-      ...gift,
+      ...giftee,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -50,7 +50,7 @@ router.get("/profile", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
-      include: [{ model: Gift }],
+      include: [{ model: Registry }],
     });
 
     const user = userData.get({ plain: true });
