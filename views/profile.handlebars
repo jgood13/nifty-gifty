@@ -7,7 +7,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-4">
+      <div class="col-6">
 
         <h1 class="">Create a new Gift list!</h1>
         <form>
@@ -23,10 +23,38 @@
         </form>
       </div>
       {{#if giftees.length}}
-        <div class="col-4">
+        <div class="col-6">
           <h2>Your Giftee's!</h2>
           {{#each giftees as |giftee|}}
-            <div> <h4>{{giftee.name}}</h4></div>
+            <div> <a href="/giftee/{{giftee.id}}">{{giftee.name}}</a></div>
+          {{/each}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+
+        <h1 class="">Create a new Registry!</h1>
+        <form>
+          <div class="form-group">
+            <label>Name of registry:</label>
+            <input
+              type="text"
+              placeholder="Enter name of person"
+              class="form-control"
+            />
+            <button class="btn">Submit</button>
+          </div>
+        </form>
+      </div>
+      {{#if registries.length}}
+        <div class="col-6">
+          <h2>Your Registry's!</h2>
+          {{#each registries as |registry|}}
+            <div> <a href="/giftee/{{registry.id}}">{{registry.name}}</a></div>
           {{/each}}
         </div>
       {{/if}}

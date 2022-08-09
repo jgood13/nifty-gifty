@@ -1,15 +1,15 @@
 const router = require("express").Router();
-const { Gift } = require("../../models");
+const { Giftee } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 router.post("/", withAuth, async (req, res) => {
   try {
-    const newGift = await Gift.create({
+    const newGiftee = await Giftee.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newGift);
+    res.status(200).json(newGiftee);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -17,19 +17,19 @@ router.post("/", withAuth, async (req, res) => {
 
 router.delete("/:id", withAuth, async (req, res) => {
   try {
-    const giftData = await Gift.destroy({
+    const gifteeData = await Giftee.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!giftData) {
+    if (!gifteeData) {
       res.status(404).json({ message: "No gift found with this id!" });
       return;
     }
 
-    res.status(200).json(giftData);
+    res.status(200).json(gifteeData);
   } catch (err) {
     res.status(500).json(err);
   }
