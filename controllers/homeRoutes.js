@@ -1,22 +1,10 @@
 const router = require("express").Router();
-const { Giftee, User, Registry } = require("../models");
+const { Giftee, User, Registry, GiftOccasion, GiftIdea } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
-    const gifteeData = await Giftee.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ["id"],
-        },
-      ],
-    });
-
-    const giftees = gifteeData.map((giftee) => giftee.get({ plain: true }));
-
     res.render("homepage", {
-      giftees,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -32,12 +20,18 @@ router.get("/giftee/:id", async (req, res) => {
           model: User,
           attributes: ["id"],
         },
+        {
+          model: GiftOccasion,
+        },
+        {
+          model: GiftIdea,
+        },
       ],
     });
 
     const giftee = gifteeData.get({ plain: true });
 
-    res.render("gift", {
+    res.render("giftee", {
       ...giftee,
       logged_in: req.session.logged_in,
     });
