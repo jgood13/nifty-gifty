@@ -14,13 +14,9 @@ Giftee.belongsTo(User, {
   foreignKey: "user_id",
 });
 
-Giftee.hasMany(GiftIdea, {
+Giftee.hasMany(GiftOccasion, {
   foreignKey: "giftee_id",
   onDelete: "CASCADE",
-});
-
-GiftIdea.belongsTo(Giftee, {
-  foreignKey: "giftee_id",
 });
 
 User.hasMany(Registry, {

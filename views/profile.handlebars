@@ -1,63 +1,82 @@
 {{#if logged_in}}
 
-  <div class="jumbotron">
-    <h1 class="font-weight-bold display-4">Welcome {{username}}!</h1>
-    <hr class="my-4" />
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
-
-        <h1 class="">Create a new Gift list!</h1>
-        <form>
-          <div class="form-group">
-            <label>Name of giftee:</label>
-            <input
-              type="text"
-              placeholder="Enter name of person"
-              class="form-control"
-            />
-            <button class="btn">Submit</button>
-          </div>
-        </form>
-      </div>
-      {{#if giftees.length}}
-        <div class="col-6">
-          <h2>Your Giftee's!</h2>
-          {{#each giftees as |giftee|}}
-            <div> <a href="/giftee/{{giftee.id}}">{{giftee.name}}</a></div>
-          {{/each}}
-        </div>
-      {{/if}}
+  
+    <div class="jumbotron">
+      <h1 class="font-weight-bold display-4 makeRoom lessRoom">Welcome {{username}}!</h1>
+      <hr class="my-4" />
     </div>
-  </div>
-  <hr />
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
 
-        <h1 class="">Create a new Registry!</h1>
-        <form>
-          <div class="form-group">
-            <label>Name of registry:</label>
-            <input
-              type="text"
-              placeholder="Enter name of person"
-              class="form-control"
-            />
-            <button class="btn">Submit</button>
-          </div>
-        </form>
-      </div>
-      {{#if registries.length}}
+    <div class="container">
+      <div class="row">
         <div class="col-6">
-          <h2>Your Registry's!</h2>
-          {{#each registries as |registry|}}
-            <div> <a href="/giftee/{{registry.id}}">{{registry.name}}</a></div>
-          {{/each}}
+
+          <h1 class="">Create a new Gift list!</h1>
+          <form class="newGifteeForm">
+            <div class="form-group">
+              <label for="name">Name of giftee:</label>
+              <input
+                type="text"
+                placeholder="Enter name of person"
+                name="name"
+                class="form-control"
+                id="gifteeName"
+              />
+              <input type="submit" class="btn gifteeSubmit" ></input>
+            </div>
+          </form>
         </div>
-      {{/if}}
+        {{#if giftees.length}}
+          <div class="col-6 profileBG">
+            <h2 class="giveSpace"><u>Your Giftee's!</u></h2>
+            {{#each giftees as |giftee|}}
+              <div id="{{giftee.id}}"class="row-mb-2 giveSpace linkNames">
+                <a
+                  href="/giftee/{{giftee.id}}"
+                >{{giftee.name}}</a>
+                <button class="btn btn-sm btn-danger targetGiftees deleteGiftee" 
+                  data-postId="{{giftee.id}}"
+                  onclick="deleteGiftees()"
+                  >DELETE</button>
+              </div>
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+    <hr />
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+
+          <h1>Create a new Registry!</h1>
+          <form class="newRegistryForm">
+            <div class="form-group">
+              <label>Name of registry:</label>
+              <input
+                type="form-input"
+                placeholder="Enter name of registry"
+                class="form-control"
+                id="registryName"
+              />
+              <input type="submit" class="btn registrySubmit"></input>
+            </div>
+          </form>
+        </div>
+        {{#if registries.length}}
+          <div class="col-6">
+            <h2 class="ml-5 giveSpace"><u>Your Registry's!</u></h2>
+            {{#each registries as |registry|}}
+              <div class="ml-5 row-mb-2 linkNames giveSpace">
+                <a href="/registry/{{registry.id}}">{{registry.name}}</a>
+                <button
+                  class="btn btn-sm btn-danger targetRegistry deleteRegistry ml-5"
+                  data-postId="{{registry.id}}"
+                  onclick="deleteRegistries()"
+                >DELETE</button></div>
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
     </div>
   </div>
 {{/if}}

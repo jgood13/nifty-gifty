@@ -1,15 +1,14 @@
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    {{#if loggedIn}}
-      <button id="logout" class="btn-no-style">Logout</button>
-    {{/if}}
-  </div>
-</nav>
-<main>
-  <aside>
-    <h2>A place to remember your gifts!</h2>
-  </aside>
-</main>
-{{#if loggedIn}}
-  <script src="../public/js/logout.js"></script>
-{{/if}}
+<div class="jumbotron">
+  <h1 class="display-5 makeRoom">This is a page to help you remember gifts for
+    those you love!</h1>
+
+  <p class="h3 homepage">Feel free to save loved ones, different occasions, gift
+    ideas, or even create your own registry!</p>
+
+  <hr class="my-4" />
+  <a
+    class="btn btn-primary btn-lg homepage"
+    href="/login"
+    role="button"
+  >Login/Sign up now!</a>
+</div>

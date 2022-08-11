@@ -6,6 +6,14 @@ const registryData = [
     user_id: "1",
   },
   {
+    name: "Wedding",
+    user_id: "1",
+  },
+  {
+    name: "Birthday",
+    user_id: "1",
+  },
+  {
     name: "Baby Shower",
     user_id: "2",
   },

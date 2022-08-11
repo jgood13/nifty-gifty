@@ -1,5 +1,5 @@
 * {
-  background-color: #f0f4ef;
+  background-color: #d5e1a3;
   font-family: "Ubuntu Condensed", sans-serif;
 }
 
@@ -7,6 +7,9 @@ header {
   display: block;
 }
 
+.height {
+  height: 100%;
+}
 h1 {
   color: #3f7cac;
   background-color: #d5e1a3;
@@ -22,7 +25,7 @@ h2 {
 }
 
 .login-card {
-  background-color: #f0f4ef;
+  background-color: #d5e1a3;
   display: flex;
   align-items: baseline;
   justify-content: center;
@@ -41,8 +44,65 @@ h2 {
 .btn {
   color: #3f7cac;
   background-color: #d5e1a3;
+  border: 2px solid #3f7cac;
 }
 
 .container {
+  background-color: #4d5789;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.navbarButtons {
+  background-color: #3f7cac;
+  color: #d5e1a3;
+  height: 2rem;
+  border: 1px solid black;
+  font-size: larger;
+  font-weight: bold;
+  padding: 0 1rem 0 1rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 3px solid gray;
+  border-bottom: 1px solid gray;
+  margin: -1rem -1rem -1rem 0;
+  background-color: #4d5789;
+}
+
+.login-page {
+  margin-right: 2rem;
+}
+
+.makeRoom {
+  padding-top: 3rem;
+}
+
+.profileBG {
   background-color: #d5e1a3;
+}
+
+.homepage {
+  color: #3f7cac;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.giveSpace {
+  margin: 0 0 1rem 2rem;
+}
+
+.linkNames {
+  font-size: larger;
+  color: #3f7cac;
+}
+
+.lessRoom {
+  margin: 0 0 -4px 0;
 }
