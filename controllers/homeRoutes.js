@@ -68,6 +68,26 @@ router.get("/registry/:id", async (req, res) => {
   }
 });
 
+router.get("/giftoccasion/:id", async (req, res) => {
+  try {
+    const giftOccasionData = await GiftOccasion.findByPk(req.params.id, {
+      include: {
+        model: GiftIdea,
+      },
+    });
+
+    const newGiftOccasion = giftOccasionData.get({ plain: true });
+
+    res.render("giftOccasion", {
+      ...newGiftOccasion,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 router.get("/profile", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {

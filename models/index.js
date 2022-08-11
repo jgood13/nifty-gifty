@@ -10,6 +10,11 @@ User.hasMany(Giftee, {
   onDelete: "CASCADE",
 });
 
+User.hasMany(GiftIdea, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
+});
+
 Giftee.belongsTo(User, {
   foreignKey: "user_id",
 });
@@ -40,6 +45,10 @@ RegistryGift.belongsTo(Registry, {
 GiftOccasion.hasMany(GiftIdea, {
   foreignKey: "giftOccasion_id",
   onDelete: "CASCADE",
+});
+
+GiftIdea.belongsTo(Giftee, {
+  foreignKey: "giftee_id",
 });
 
 GiftIdea.belongsTo(GiftOccasion, {

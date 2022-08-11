@@ -59,7 +59,6 @@ const addGiftee = async (event) => {
 };
 
 const addRegistry = async (event) => {
-  event.preventDefault();
   const registryName = document.querySelector("#registryName").value.trim();
 
   if (registryName) {
@@ -79,10 +78,9 @@ const addRegistry = async (event) => {
   }
 };
 
-document.querySelector(".gifteeSubmit").addEventListener("click", addGiftee);
-document
-  .querySelector(".registrySubmit")
-  .addEventListener("click", addRegistry);
+// document
+//   .querySelector(".registrySubmit")
+//   .addEventListener("click", addRegistry);
 
 // document
 //   .querySelectorAll(".deleteGiftee")
