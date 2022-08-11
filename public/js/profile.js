@@ -2,6 +2,7 @@ const targetGiftee = document.querySelectorAll(".targetGiftees");
 const targetRegistry = document.querySelectorAll(".targetRegistry");
 
 const deleteGiftees = async (event) => {
+  // event.preventDefault();
   console.log(document.querySelector(".targetGiftees"));
   const id = document
     .querySelector(".targetGiftees")
@@ -20,8 +21,10 @@ const deleteGiftees = async (event) => {
 };
 
 const deleteRegistries = async (event) => {
-  event.preventDefault();
-  const id = targetRegistry.getAttribute("data-postId");
+  // event.preventDefault();
+  const id = document
+    .querySelector(".targetRegistry")
+    .getAttribute("data-postId");
 
   const response = await fetch(`/api/registry/${id}`, {
     method: "DELETE",
