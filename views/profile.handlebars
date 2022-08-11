@@ -21,7 +21,7 @@
                 class="form-control"
                 id="gifteeName"
               />
-              <input type="submit" class="btn gifteeSubmit" ></input>
+              <input type="submit" onclick="addGiftee()" class="btn " ></input>
             </div>
           </form>
         </div>
@@ -49,7 +49,7 @@
         <div class="col-6">
 
           <h1>Create a new Registry!</h1>
-          <form class="newRegistryForm">
+          <form class="newRegistryForm" onsubmit="addRegistry()">
             <div class="form-group">
               <label>Name of registry:</label>
               <input
