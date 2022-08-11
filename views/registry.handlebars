@@ -19,18 +19,21 @@
           <input id="submitNew" data-postId="{{id}}" type="submit" class="btn"></input>
         </div>
       </form>
+      <div id="theId" data-registryId="{{id}}"></div>
     </div>
     {{#if registryGifts.length}}
       <div class="col-6">
         <h2 class="giveSpace">What I would like:</h2>
         {{#each registryGifts as |registryGift|}}
-          <div class="row-mb-2 linkNames giveSpace"> <p>{{registryGift.gift}}</p>
+          <div class="ml-5 row-mb-2 linkNames giveSpace"> <p>{{registryGift.gift}}</p>
           <button
                   class="btn btn-sm btn-danger targetRegistry deleteRegistry ml-5"
                   data-postId="{{registryGift.id}}"
+                  data-registryId="{{registry.id}}"
                   onclick="deleteRegistryGift(event)"
-                >DELETE</button></div></div>
+                >DELETE</button></div>
         {{/each}}
+        </div>
       </div>
     {{/if}}
   </div>

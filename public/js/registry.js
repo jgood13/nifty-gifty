@@ -1,41 +1,18 @@
-const addRegistryGift = async (event) => {
-  const registryID = event.target.data;
-  const registryGiftName = document
-    .querySelector("#registryGiftName")
-    .value.trim();
-  console.log(registryGiftName);
-  if (registryGiftName) {
-    const response = await fetch(`/api/registrygift`, {
-      method: "POST",
-      body: JSON.stringify(
-        { gift: registryGiftName },
-        { registry_id: registryID }
-      ),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    if (response.ok) {
-      document.location.replace("/registry");
-    } else {
-      alert("Failed to create registry gift");
-    }
-  }
-};
-
 const deleteRegistryGift = async (event) => {
-  console.log(event);
+  console.log(document.getElementById("theId").getAttribute("data-registryid"));
   // event.preventDefault();
   const id = event.target.dataset.postid;
-  console.log(id);
+  const registryid = document
+    .getElementById("theId")
+    .getAttribute("data-registryid");
+  console.log(registryid);
 
-  const response = await fetch(`/api/registry/${id}`, {
+  const response = await fetch(`/api/registrygift/${id}`, {
     method: "DELETE",
   });
 
   if (response.ok) {
-    document.location.replace("/profile");
+    document.location.replace(`/registry/${registryid}`);
   } else {
     alert("Failed to delete the post!");
   }

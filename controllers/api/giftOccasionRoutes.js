@@ -17,15 +17,14 @@ router.post("/", withAuth, async (req, res) => {
 
 router.delete("/:id", withAuth, async (req, res) => {
   try {
-    const RegistryData = await Registry.destroy({
+    const RegistryData = await GiftOccasion.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
       },
     });
 
     if (!RegistryData) {
-      res.status(404).json({ message: "No registry found with this id!" });
+      res.status(404).json({ message: "No gift occasion found with this id!" });
       return;
     }
 

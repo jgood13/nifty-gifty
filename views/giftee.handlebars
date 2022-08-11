@@ -4,6 +4,7 @@
     <h1 class="font-weight-bold display-4">Showing Gift Occasions For {{name}}!</h1>
     <hr class="my-4" />
   </div>
+  <div id="theId" data-occasionid="{{id}}"></div>
 
   <div class="container">
     <div class="row">
@@ -32,7 +33,12 @@
         <div class="col-6">
           <h2 class="giveSpace">Your Giftee's Occasions!</h2>
           {{#each giftOccasions as |giftOccasion|}}
-            <div class="linkNames giveSpace" > <a href="/giftoccasion/{{giftOccasion.id}}">{{giftOccasion.occasion}}</a></div>
+            <div class="row-mb-2 linkNames giveSpace" > <a href="/giftoccasion/{{giftOccasion.id}}">{{giftOccasion.occasion}}</a>
+            <button
+                  class="btn btn-sm btn-danger targetRegistry deleteRegistry ml-5"
+                  data-postId="{{giftOccasion.id}}"
+                  onclick="deleteGiftOccasions(event)"
+                >DELETE</button></div>
           {{/each}}
         </div>
       {{/if}}
