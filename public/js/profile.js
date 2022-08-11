@@ -1,12 +1,12 @@
-const targetGiftee = document.querySelectorAll(".targetGiftees");
-const targetRegistry = document.querySelectorAll(".targetRegistry");
+const targetGiftee = document.querySelector(".targetGiftees");
+const targetRegistry = document.querySelector(".targetRegistry");
+const deleteButtons = document.querySelectorAll(".deleteGiftee");
 
 const deleteGiftees = async (event) => {
+  console.log(event);
   // event.preventDefault();
-  console.log(document.querySelector(".targetGiftees"));
-  const id = document
-    .querySelector(".targetGiftees")
-    .getAttribute("data-postId");
+  // console.log(document.querySelector(".targetGiftees"));
+  const id = event.target.dataset.postid;
   console.log(id, "DELETE");
 
   const response = await fetch(`/api/giftee/${id}`, {
@@ -20,11 +20,14 @@ const deleteGiftees = async (event) => {
   }
 };
 
+// deleteButtons.forEach((element) => {
+//   element.addEventListener("click", deleteGiftees);
+// });
 const deleteRegistries = async (event) => {
+  console.log(event);
   // event.preventDefault();
-  const id = document
-    .querySelector(".targetRegistry")
-    .getAttribute("data-postId");
+  const id = event.target.dataset.postid;
+  console.log(id);
 
   const response = await fetch(`/api/registry/${id}`, {
     method: "DELETE",

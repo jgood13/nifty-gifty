@@ -35,7 +35,7 @@
                 >{{giftee.name}}</a>
                 <button class="btn btn-sm btn-danger targetGiftees deleteGiftee" 
                   data-postId="{{giftee.id}}"
-                  onclick="deleteGiftees()"
+                  onclick="deleteGiftees(event)"
                   >DELETE</button>
               </div>
             {{/each}}
@@ -71,7 +71,7 @@
                 <button
                   class="btn btn-sm btn-danger targetRegistry deleteRegistry ml-5"
                   data-postId="{{registry.id}}"
-                  onclick="deleteRegistries()"
+                  onclick="deleteRegistries(event)"
                 >DELETE</button></div>
             {{/each}}
           </div>
