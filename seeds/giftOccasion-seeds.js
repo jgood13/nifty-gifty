@@ -11,7 +11,7 @@ const giftOccasionData = [
     occasion: "Christmas",
     occasionDate: "2022-12-25",
     remind: true,
-    giftee_id: 2,
+    giftee_id: 1,
   },
   {
     occasion: "Wedding",

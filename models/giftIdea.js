@@ -22,13 +22,6 @@ GiftIdea.init(
         key: "id",
       },
     },
-    giftee_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "giftee",
-        key: "id",
-      },
-    },
   },
   {
     sequelize,
