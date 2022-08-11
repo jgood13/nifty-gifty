@@ -1,5 +1,12 @@
 const router = require("express").Router();
-const { Giftee, User, Registry, GiftOccasion, GiftIdea } = require("../models");
+const {
+  Giftee,
+  User,
+  Registry,
+  GiftOccasion,
+  GiftIdea,
+  RegistryGift,
+} = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
@@ -23,16 +30,37 @@ router.get("/giftee/:id", async (req, res) => {
         {
           model: GiftOccasion,
         },
+      ],
+    });
+    if (!gifteeData) {
+      res.status(404).json({ message: "no giftee with this id." });
+    }
+
+    const newGiftee = gifteeData.get({ plain: true });
+
+    res.render("giftee", {
+      ...newGiftee,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/registry/:id", async (req, res) => {
+  try {
+    const registryData = await Registry.findByPk(req.params.id, {
+      include: [
         {
-          model: GiftIdea,
+          model: RegistryGift,
         },
       ],
     });
 
-    const giftee = gifteeData.get({ plain: true });
+    const registry = registryData.get({ plain: true });
 
-    res.render("giftee", {
-      ...giftee,
+    res.render("registry", {
+      ...registry,
       logged_in: req.session.logged_in,
     });
   } catch (err) {

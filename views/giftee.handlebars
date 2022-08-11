@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="./css/custom.css" />
+
 <div class="jumbotron">
     <h1 class="font-weight-bold display-4">Showing Gift Occasions For {{name}}!</h1>
     <hr class="my-4" />
@@ -9,7 +11,7 @@
 
         <h1 class="">Create a new occasion!</h1>
         <form>
-          <div class="form-group">
+          <div class="form-group flex-column">
             <label>Name of Occasion:</label>
             <input
               type="text"
@@ -20,18 +22,131 @@
             <input
               type="Date"
             />
-            <button class="btn">Submit</button>
+            <label>Do you want an email reminder a week before?</label>
+            <input type="checkbox" id="reminder">
+            <input type="submit" class="btn">Submit</input>
           </div>
         </form>
       </div>
-      {{#if giftoccasions.length}}
+      {{#if giftOccasions.length}}
         <div class="col-6">
-          <h2>Your Giftee's!</h2>
-          {{#each giftoccasions as |giftoccasion|}}
-            <div> <a href="/giftee/{{giftoccasion.id}}">{{giftoccasion.name}}</a></div>
+          <h2 class="giveSpace">Your Giftee's Occasions!</h2>
+          {{#each giftOccasions as |giftOccasion|}}
+            <div class="linkNames giveSpace" > <a href="/giftee/{{giftOccasion.id}}">{{giftOccasion.name}}</a></div>
           {{/each}}
         </div>
       {{/if}}
     </div>
   </div>
-{{/if}}
+
+  <style>
+    * {
+  background-color: #d5e1a3;
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+
+header {
+  display: block;
+}
+
+.height {
+  height: 100%;
+}
+h1 {
+  color: #3f7cac;
+  background-color: #d5e1a3;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+h2 {
+  color: #3f7cac;
+  display: flex;
+  align-content: column;
+}
+
+.login-card {
+  background-color: #d5e1a3;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  /* justify-content: center; */
+  padding: 10px;
+  margin: 5px;
+}
+
+.form-group {
+  color: #8ba2ad;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.btn {
+  color: #3f7cac;
+  background-color: #d5e1a3;
+  border: 2px solid #3f7cac;
+}
+
+.container {
+  background-color: #4d5789;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.navbarButtons {
+  background-color: #3f7cac;
+  color: #d5e1a3;
+  height: 2rem;
+  border: 1px solid black;
+  font-size: larger;
+  font-weight: bold;
+  padding: 0 1rem 0 1rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 3px solid gray;
+  border-bottom: 1px solid gray;
+  margin: -1rem -1rem -1rem 0;
+  background-color: #4d5789;
+}
+
+.login-page {
+  margin-right: 2rem;
+}
+
+.makeRoom {
+  padding-top: 3rem;
+}
+
+.profileBG {
+  background-color: #d5e1a3;
+}
+
+.homepage {
+  color: #3f7cac;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.giveSpace {
+  margin: 0 0 1rem 2rem;
+}
+
+.linkNames {
+  font-size: larger;
+  color: #3f7cac;
+}
+
+.lessRoom {
+  margin: 0 0 -4px 0;
+}
+
+  </style>
