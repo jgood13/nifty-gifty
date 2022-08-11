@@ -106,3 +106,33 @@ a {
 .lessRoom {
   margin: 0 0 -4px 0;
 }
+
+@media screen and (max-width: 992px) {
+  .height {
+    width: 100%;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .height {
+    width: 100%;
+  }
+  .container {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .height {
+    width: 100%;
+  }
+  .container {
+    width: 75%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+}
