@@ -31,7 +31,7 @@ const registryGiftData = [
   },
   {
     gift: "Baby Blanket",
-    registry_id: 1,
+    registry_id: 2,
   },
   {
     gift: "Dishware",

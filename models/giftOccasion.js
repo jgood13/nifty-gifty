@@ -15,13 +15,13 @@ GiftOccasion.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    occasionDate: {
-      type: DataTypes.DATEONLY,
-    },
-    remind: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true,
-    },
+    // occasionDate: {
+    //   type: DataTypes.DATEONLY,
+    // },
+    // remind: {
+    //   type: DataTypes.BOOLEAN,
+    //   allowNull: true,
+    // },
     giftee_id: {
       type: DataTypes.INTEGER,
       references: {
