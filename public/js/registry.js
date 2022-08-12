@@ -52,10 +52,3 @@ const deleteRegistryGift = async (event) => {
   }
 };
 
-
-const goToLink = (event) => {
-  let name = event.target.dataset.linkid;
-  console.log('gotolink', name)
-  let url = `https://www.amazon.com/` + name
-  window.open(url, '_blank')
-}
