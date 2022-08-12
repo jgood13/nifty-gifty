@@ -6,17 +6,18 @@
 <div class="container">
   <div class="row">
     <div class="col-6">
+      <div id="theId" data-occasion="{{id}}"></div>
 
       <h1 class="">Put a new gift idea on the list!</h1>
       <form>
-        <div class="form-group" onsubmit="addRegistryGift()" >
+        <div class="form-group" onsubmit="createGift()" >
           <label>Name of gift:</label>
           <input
             type="text"
             placeholder="Enter name of gift"
             class="form-control"
-            id="occasionGift"/>
-          <input id="submitNew" type="submit" class="btn"></input>
+            id="occasionGift">
+          <button id="submitNew" type="submit" class="btn">Submit</button>
         </div>
       </form>
     </div>
@@ -24,7 +25,12 @@
       <div class="col-6">
         <h2 class="mt-3 giveSpace">Gift Ideas for their {{occasion}}:</h2>
         {{#each giftIdeas as |giftIdea|}}
-          <div class="linkNames giveSpace"> <p>{{giftIdea.gift}}</p></div>
+          <div class="linkNames giveSpace"> <a href="https://www.amazon.com/{{giftIdea.gift}}" target="_blank">{{giftIdea.gift}}</a>
+          <button
+                  class="btn btn-sm btn-danger deleteGift ml-5"
+                  data-postId="{{giftIdea.id}}"
+                  onclick="deleteGiftIdea(event)"
+                >DELETE</button></div>
         {{/each}}
       </div>
     {{/if}}
