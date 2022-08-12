@@ -65,6 +65,9 @@ a {
   padding: 0 1rem 0 1rem;
 }
 
+.showPointer:hover{
+  cursor: pointer;
+}
 .navbar {
   display: flex;
   align-items: center;

@@ -2,7 +2,7 @@ const { GiftIdea } = require("../models");
 
 const giftIdeaData = [
   {
-    gift: "Shoes",
+    gift: "Playstation",
     giftOccasion_id: 1,
   },
   {
