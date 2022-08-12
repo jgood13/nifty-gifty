@@ -2,7 +2,7 @@ const { RegistryGift } = require("../models");
 
 const registryGiftData = [
   {
-    gift: "Shoes",
+    gift: "Xbox",
     registry_id: 1,
   },
   {
@@ -10,7 +10,7 @@ const registryGiftData = [
     registry_id: 1,
   },
   {
-    gift: "Sweater",
+    gift: "Jordans",
     registry_id: 1,
   },
   {

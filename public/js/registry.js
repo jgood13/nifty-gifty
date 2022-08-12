@@ -51,3 +51,11 @@ const deleteRegistryGift = async (event) => {
     alert("Failed to delete the post!");
   }
 };
+
+
+const goToLink = (event) => {
+  let name = event.target.dataset.linkid;
+  console.log('gotolink', name)
+  let url = `https://www.amazon.com/` + name
+  window.open(url, '_blank')
+}
