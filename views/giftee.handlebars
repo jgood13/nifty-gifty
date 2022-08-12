@@ -11,20 +11,22 @@
       <div class="col-6">
 
         <h1 class="">Create a new occasion!</h1>
-        <form>
+        <form onsubmit="createGiftOccasion()">
           <div class="form-group flex-column">
             <label>Name of Occasion:</label>
             <input
               type="text"
               placeholder="Enter name of occasion"
               class="form-control"
+              id="occasionName"
             />
             <label>Date of occasion:</label>
             <input
               type="Date"
+              id="occasionDate"
             />
             <label>Do you want an email reminder a week before?</label>
-            <input type="checkbox" id="reminder">
+            <input data-val='true' type="checkbox" id="reminder" value="true">
             <input type="submit" class="btn">Submit</input>
           </div>
         </form>
