@@ -1,10 +1,11 @@
 const createGift = async (event) => {
+  console.log(document.getElementById("occasionGift").value)
   if (document.getElementById("occasionGift").value) {
     const response = await fetch(`/api/giftidea`, {
       method: "POST",
       body: JSON.stringify({
-        occasion: document.getElementById("occasionGift").value,
-        giftee_id: document.getElementById('theId').getAttribute('data-occasion')
+        gift: document.getElementById("occasionGift").value,
+        giftOccasion_id: document.getElementById('theId').getAttribute('data-occasion')
       }),
       headers: {
         "Content-Type": "application/json",
@@ -14,7 +15,7 @@ const createGift = async (event) => {
     if (response.ok) {
       console.log('added gift')
       document.location.replace(
-        `/giftee/${document
+        `/giftoccasion/${document
           .getElementById("theId")
           .getAttribute("data-occasion")}`
       );

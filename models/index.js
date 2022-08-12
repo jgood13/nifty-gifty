@@ -47,10 +47,6 @@ GiftOccasion.hasMany(GiftIdea, {
   onDelete: "CASCADE",
 });
 
-GiftIdea.belongsTo(Giftee, {
-  foreignKey: "giftee_id",
-});
-
 GiftIdea.belongsTo(GiftOccasion, {
   foreignKey: "giftOccasion_id",
 });
