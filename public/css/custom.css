@@ -65,7 +65,11 @@ a {
   padding: 0 1rem 0 1rem;
 }
 
+
 .showPointer:hover{
+  cursor: pointer;
+}
+#showPointer:hover{
   cursor: pointer;
 }
 .navbar {
@@ -88,6 +92,10 @@ a {
 
 .profileBG {
   background-color: #d5e1a3;
+}
+
+.label {
+  color: #3f7cac
 }
 
 .homepage {

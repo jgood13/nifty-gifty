@@ -10,11 +10,11 @@ const giftIdeaData = [
     giftOccasion_id: 1,
   },
   {
-    gift: "Sweater",
+    gift: "Car",
     giftOccasion_id: 2,
   },
   {
-    gift: "Video Game",
+    gift: "Mattress",
     giftOccasion_id: 2,
   },
   {
@@ -26,15 +26,7 @@ const giftIdeaData = [
     giftOccasion_id: 5,
   },
   {
-    gift: "Baby Clothes",
-    giftOccasion_id: 5,
-  },
-  {
-    gift: "Baby Blanket",
-    giftOccasion_id: 5,
-  },
-  {
-    gift: "Diamond earings",
+    gift: "Earings",
     giftOccasion_id: 4,
   },
   {
