@@ -20,6 +20,7 @@ GiftOccasion.init(
     },
     remind: {
       type: DataTypes.BOOLEAN,
+      allowNull: true,
     },
     giftee_id: {
       type: DataTypes.INTEGER,

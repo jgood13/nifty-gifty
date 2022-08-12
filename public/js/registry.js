@@ -1,3 +1,5 @@
+
+
 const deleteRegistryGift = async (event) => {
   console.log(document.getElementById("theId").getAttribute("data-registryid"));
   // event.preventDefault();
