@@ -87,11 +87,11 @@ app.post('/send', (req, res) =>{
 
     
 let transporter = nodemailer.createTransport({
-  host: 'smtp.netcorecloud.net',
+  host: 'smtp.sendgrid.net',
   port: 587,
   auth: {
-    user:'niftygiftymailer',
-    pass: process.env.PEPIPOST_KEY
+    user:'apikey',
+    pass: process.env.SENDGRID_API_KEY
   },
   secure:false,
   tls: {
@@ -109,7 +109,7 @@ let transporter = nodemailer.createTransport({
 // }
 // transporter.use('compile', hbs(handlebarOption))
 let mailOptions = {
-  from: '"Nifty Gifty"<info@pepisandbox.com>',
+  from: '"Nifty Gifty"<NiftyGiftyMailer@gmail.com>',
   to: req.body.email,
   subject: "Here is my giftlist/registy",
   text: 'Nifty Gifty',
