@@ -7,7 +7,7 @@ const createGiftOccasion = async (event) => {
   // const occasionDate = document.getElementById("occasionDate").value;
   // const isRemind = document.getElementById("reminder").value;
 
-  console.log(typeof isRemind);
+  // console.log(typeof isRemind);
   if (document.getElementById("occasionName").value) {
     const response = await fetch(`/api/giftoccasion`, {
       method: "POST",

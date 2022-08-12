@@ -1,9 +1,9 @@
 <div class="jumbotron">
-  <h1 class="font-weight-bold display-4">{{name}}</h1>
+  <h1 class="font-weight-bold display-4 makeRoom">{{name}}</h1>
   <hr class="my-4" />
 </div>
 
-<div id="title" data-title="{{name}}"></div>
+<div id="theId" data-name="{{id}}"></div>
 
 <div class="container">
   <div class="row">
@@ -11,14 +11,14 @@
 
       <h1 class="">Put a new gift on the registry!</h1>
       <form>
-        <div class="form-group" onsubmit="addRegistryGift(event)" >
+        <div class="form-group" onsubmit="addRegistryGift()" >
           <label>Name of gift:</label>
           <input
             type="text"
             placeholder="Enter name of gift"
             class="form-control"
-            id="registyGiftName"/>
-          <input id="submitNew" data-postId="{{id}}" type="submit" class="btn"></input>
+            id="giftName">
+          <button onclick="addRegistryGift()" id="submitNew" data-postId="{{id}}" type="submit" class="btn">Submit</button>
         </div>
       </form>
       <div id="theId" data-registryId="{{id}}"></div>
