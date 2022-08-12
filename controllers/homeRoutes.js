@@ -1,6 +1,4 @@
 const router = require("express").Router();
-const path = require("path");
-
 const {
   Giftee,
   User,
@@ -10,32 +8,6 @@ const {
   RegistryGift,
 } = require("../models");
 const withAuth = require("../utils/auth");
-const hbs2 = require('nodemailer-express-handlebars')
-const nodemailer = require('nodemailer');
-
-
-
-
-
-
-const emailRegistry = () => {
-const sendEmail = document.getElementById('sendToEmail').value
-const title = document.getElementById('title').getAttribute('data-title')
-const gifts = document.querySelectorAll('.gifts').getAttribute('data-gifts')
-
-console.log(sendEmail, title, gifts)
-
-let mailOptions = {
-  from:"NiftyGiftyEmail@gmail.com",
-  to: sendEmail,
-  subject: "Here is my giftlist/registy",
-  template:'email',
-  contest: {
-    title: title ,
-    gifts: gifts
-    }
-  }
-}
 
 
 
