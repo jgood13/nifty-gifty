@@ -19,6 +19,7 @@
     "node-fetch": "^3.2.10",
     "nodemailer": "^6.7.8",
     "nodemailer-express-handlebars": "^5.0.0",
+    "pepipost": "^5.0.0",
     "sequelize": "^6.21.3"
   }
 }
