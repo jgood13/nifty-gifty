@@ -10,11 +10,7 @@ const registryGiftData = [
     registry_id: 1,
   },
   {
-    gift: "Jordans",
-    registry_id: 1,
-  },
-  {
-    gift: "Video Game",
+    gift: "Nike",
     registry_id: 1,
   },
   {
@@ -26,23 +22,15 @@ const registryGiftData = [
     registry_id: 2,
   },
   {
-    gift: "Baby Clothes",
-    registry_id: 2,
-  },
-  {
-    gift: "Baby Blanket",
-    registry_id: 2,
-  },
-  {
     gift: "Dishware",
     registry_id: 3,
   },
   {
-    gift: "Wine Glasses",
+    gift: "Silverware",
     registry_id: 3,
   },
   {
-    gift: "Kitchen Knives",
+    gift: "Knives",
     registry_id: 3,
   },
   {
