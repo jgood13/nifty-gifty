@@ -91,7 +91,7 @@ let transporter = nodemailer.createTransport({
   port: 587,
   auth: {
     user:'apikey',
-    pass: process.env.SENDGRID_API_KEY
+    pass: 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
   },
   secure:false,
   tls: {
