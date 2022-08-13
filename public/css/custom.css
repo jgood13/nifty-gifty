@@ -29,7 +29,6 @@ h2 {
   display: flex;
   align-items: baseline;
   justify-content: center;
-  /* justify-content: center; */
   padding: 10px;
   margin: 5px;
 }
@@ -48,7 +47,7 @@ h2 {
 }
 
 .container {
-  background-color: #4d5789;
+  background-color: #8ba2ad;
 }
 
 a {
@@ -65,11 +64,10 @@ a {
   padding: 0 1rem 0 1rem;
 }
 
-
-.showPointer:hover{
+.showPointer:hover {
   cursor: pointer;
 }
-#showPointer:hover{
+#showPointer:hover {
   cursor: pointer;
 }
 .navbar {
@@ -79,13 +77,12 @@ a {
   border-top: 3px solid gray;
   border-bottom: 1px solid gray;
   margin: -1rem -1rem -1rem 0;
-  background-color: #4d5789;
+  background-color: #8ba2ad;
 }
 
 .login-page {
   margin-right: 2rem;
 }
-
 
 .makeRoom {
   padding-top: 3rem;
@@ -96,7 +93,7 @@ a {
 }
 
 .label {
-  color: #3f7cac
+  color: #3f7cac;
 }
 
 .homepage {
