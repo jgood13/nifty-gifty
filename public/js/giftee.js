@@ -4,7 +4,7 @@ const createGiftOccasion = async (event) => {
   // if (giftRemind === true) {
   // }
 
-  // const occasionDate = document.getElementById("occasionDate").value;
+  const occasionDate = document.getElementById("occasionDate").value;
   // const isRemind = document.getElementById("reminder").value;
 
   // console.log(typeof isRemind);
@@ -13,6 +13,7 @@ const createGiftOccasion = async (event) => {
       method: "POST",
       body: JSON.stringify({
         occasion: document.getElementById("occasionName").value,
+        occasionDate: occasionDate,
         giftee_id: document.getElementById('theId').getAttribute('data-occasionid')
       }),
       headers: {

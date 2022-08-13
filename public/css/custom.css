@@ -65,6 +65,13 @@ a {
   padding: 0 1rem 0 1rem;
 }
 
+
+.showPointer:hover{
+  cursor: pointer;
+}
+#showPointer:hover{
+  cursor: pointer;
+}
 .navbar {
   display: flex;
   align-items: center;
@@ -79,12 +86,17 @@ a {
   margin-right: 2rem;
 }
 
+
 .makeRoom {
   padding-top: 3rem;
 }
 
 .profileBG {
   background-color: #d5e1a3;
+}
+
+.label {
+  color: #3f7cac
 }
 
 .homepage {

@@ -20,11 +20,12 @@
               class="form-control"
               id="occasionName"
             />
-            {{!-- <label>Date of occasion:</label>
+             <label>Date of occasion:</label>
             <input
               type="Date"
               id="occasionDate"
             />
+            {{!--
             <label>Do you want an email reminder a week before?</label>
             <input data-val='true' type="checkbox" id="reminder" value="true"> --}}
             <button type="submit" class="btn">Submit</button>
@@ -35,7 +36,7 @@
         <div class="col-6">
           <h2 class="giveSpace">Your Giftee's Occasions!</h2>
           {{#each giftOccasions as |giftOccasion|}}
-            <div class="row-mb-2 linkNames giveSpace" > <a href="/giftoccasion/{{giftOccasion.id}}">{{giftOccasion.occasion}}</a>
+            <div class="row-mb-2 linkNames giveSpace" > <a href="/giftoccasion/{{giftOccasion.id}}">{{giftOccasion.occasion}} on {{giftOccasion.occasionDate}}</a>
             <button
                   class="btn btn-sm btn-danger targetRegistry deleteRegistry ml-5"
                   data-postId="{{giftOccasion.id}}"

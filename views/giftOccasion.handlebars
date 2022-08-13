@@ -1,5 +1,6 @@
 <div class="jumbotron">
-  <h1 class="font-weight-bold display-4 makeRoom">{{occasion}} gift idea list </h1>
+  <h1 class="font-weight-bold display-4 makeRoom ">{{occasion}} gift idea list </h1>
+  <h3 class="font-weight-bold display-6 label">Date: {{occasionDate}} </h3>
   <hr class="my-4" />
 </div>
 
@@ -9,6 +10,7 @@
       <div id="theId" data-occasion="{{id}}"></div>
 
       <h1 class="">Put a new gift idea on the list!</h1>
+      
       <form>
         <div class="form-group" onsubmit="createGift()" >
           <label>Name of gift:</label>
@@ -24,8 +26,9 @@
     {{#if giftIdeas.length}}
       <div class="col-6">
         <h2 class="mt-3 giveSpace">Gift Ideas for their {{occasion}}:</h2>
+        <label class="giveSpace label"> Click item to go to amazon page</label>
         {{#each giftIdeas as |giftIdea|}}
-          <div class="linkNames giveSpace"> <a href="https://www.amazon.com/{{giftIdea.gift}}" target="_blank">{{giftIdea.gift}}</a>
+          <div class="linkNames giveSpace"> <a class="showPointer" data-linkid="{{toLowerCase giftIdea.gift}}" onclick="goToLink(event)" target="_blank">{{giftIdea.gift}}</a>
           <button
                   class="btn btn-sm btn-danger deleteGift ml-5"
                   data-postId="{{giftIdea.id}}"

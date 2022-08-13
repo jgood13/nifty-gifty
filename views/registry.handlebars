@@ -26,8 +26,9 @@
     {{#if registryGifts.length}}
       <div class="col-6">
         <h2 class="giveSpace">What I would like:</h2>
+        <label class="giveSpace label"> Click item to go to amazon page</label>
         {{#each registryGifts as |registryGift|}}
-          <div data-gifts="{{registryGift.gift}}" class="ml-5 row-mb-2 linkNames giveSpace gifts"> <p>{{registryGift.gift}}</p>
+          <div data-gifts="{{registryGift.gift}}" class="ml-5 row-mb-2 linkNames giveSpace gifts"> <a class="showPointer" id="showPointer" data-linkid="{{toLowerCase registryGift.gift}}" onclick="goToLink(event)" target="_blank">{{registryGift.gift}}</a>
           <button
                   class="btn btn-sm btn-danger targetRegistry deleteRegistry ml-5"
                   data-postId="{{registryGift.id}}"

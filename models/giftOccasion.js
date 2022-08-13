@@ -15,9 +15,9 @@ GiftOccasion.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // occasionDate: {
-    //   type: DataTypes.DATEONLY,
-    // },
+    occasionDate: {
+      type: DataTypes.DATEONLY,
+    },
     // remind: {
     //   type: DataTypes.BOOLEAN,
     //   allowNull: true,
