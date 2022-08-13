@@ -25,8 +25,14 @@ Nifty Gifty is a way for you to store your gift ideas for all of your friends an
 - Node.js and Express.js
 - MySQL and Sequelize
 - Handlebars.js
-- Bootstrap?
+- Bootstrap
+- SendGrid SMTP, NodeMailer
 
-## Screenshot
+## Screenshot/Gif
+
+![Screencapture of page](./Assets/images/niftyGiftyGif.gif "Page GIF")
 
 ## Link(s) to Deployed Application
+
+<a href = "https://github.com/jgood13/nifty-gifty"
+target="_blank">Github Repo</a>
