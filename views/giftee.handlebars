@@ -1,7 +1,7 @@
 
 
 <div class="jumbotron">
-    <h1 class="font-weight-bold display-4">Showing Gift Occasions For {{name}}!</h1>
+    <h1 class="font-weight-bold display-4 makeRoom">Showing Gift Occasions For {{name}}!</h1>
     <hr class="my-4" />
   </div>
   <div id="theId" data-occasionid="{{id}}"></div>
@@ -34,7 +34,7 @@
       </div>
       {{#if giftOccasions.length}}
         <div class="col-6">
-          <h2 class="giveSpace">Your Giftee's Occasions!</h2>
+          <h2 class="giveSpace mt-3">Your Giftee's Occasions!</h2>
           {{#each giftOccasions as |giftOccasion|}}
             <div class="row-mb-2 linkNames giveSpace" > <a href="/giftoccasion/{{giftOccasion.id}}">{{giftOccasion.occasion}} on {{giftOccasion.occasionDate}}</a>
             <button
