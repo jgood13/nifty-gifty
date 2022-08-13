@@ -36,3 +36,5 @@ Nifty Gifty is a way for you to store your gift ideas for all of your friends an
 
 <a href = "https://github.com/jgood13/nifty-gifty"
 target="_blank">Github Repo</a>
+
+<a href = "https://salty-savannah-73034.herokuapp.com/" target="_blank">Heroku Deployment</a>
