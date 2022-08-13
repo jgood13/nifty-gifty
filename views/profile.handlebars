@@ -27,7 +27,7 @@
         </div>
         {{#if giftees.length}}
           <div class="col-6 profileBG">
-            <h2 class="giveSpace"><u>Your Giftee's!</u></h2>
+            <h2 class="giveSpace mt-3"><u>Your Giftee's!</u></h2>
             {{#each giftees as |giftee|}}
               <div id="{{giftee.id}}"class="row-mb-2 giveSpace linkNames">
                 <a
@@ -64,7 +64,7 @@
         </div>
         {{#if registries.length}}
           <div class="col-6">
-            <h2 class="ml-5 giveSpace"><u>Your Registry's!</u></h2>
+            <h2 class="ml-5 giveSpace mt-3"><u>Your Registry's!</u></h2>
             {{#each registries as |registry|}}
               <div class="ml-5 row-mb-2 linkNames giveSpace">
                 <a href="/registry/{{registry.id}}">{{registry.name}}</a>
