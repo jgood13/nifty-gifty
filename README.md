@@ -30,10 +30,9 @@ Nifty Gifty is a way for you to store your gift ideas for all of your friends an
 
 ## Screenshot/Gif
 
-![Screencapture of page](./Assets/images/niftygifty.mp4 "Page GIF")
+![Screencapture of page](./Assets/images/niftyGiftyGif.gif "Page GIF")
 
 ## Link(s) to Deployed Application
-<a href = "https://github.com/jgood13/nifty-gifty"
 
 <a href = "https://github.com/jgood13/nifty-gifty"
 target="_blank">Github Repo</a>
